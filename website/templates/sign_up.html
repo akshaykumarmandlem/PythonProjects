@@ -1,0 +1,95 @@
+{% extends "base.html" %} 
+
+{% block title %} Sign Up {% endblock %} 
+
+{% block content %}
+<div class="container d-flex justify-content-center align-items-center min-vh-100">
+    <div class="card shadow-lg p-4" style="max-width: 500px; width: 100%;">
+        <h3 class="text-center mb-4" style="font-weight: bold; color: #4a4a4a;">Sign Up</h3>
+        <form method="POST">
+            <div class="form-group mb-3">
+                <label for="email" class="form-label">Email Address</label>
+                <input 
+                    type="email" 
+                    class="form-control" 
+                    id="email" 
+                    name="email"
+                    placeholder="Enter email"
+                    required
+                />
+            </div>
+            <div class="form-group mb-3">
+                <label for="firstName" class="form-label">First Name</label>
+                <input 
+                    type="text" 
+                    class="form-control" 
+                    id="firstName" 
+                    name="firstName"
+                    placeholder="Enter first name"
+                    required
+                />
+            </div>
+            <div class="form-group mb-3">
+                <label for="password1" class="form-label">Password</label>
+                <input 
+                    type="password" 
+                    class="form-control" 
+                    id="password1" 
+                    name="password1"
+                    placeholder="Enter password"
+                    required
+                />
+            </div>
+            <div class="form-group mb-3">
+                <label for="password2" class="form-label">Password (Confirm)</label>
+                <input 
+                    type="password" 
+                    class="form-control" 
+                    id="password2" 
+                    name="password2"
+                    placeholder="Confirm password"
+                    required
+                />
+            </div>
+            <div class="text-center mt-4">
+                <button type="submit" class="btn btn-primary btn-block" style="width: 100%;">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<style>
+    body {
+      background-image: url(https://img.freepik.com/free-vector/realistic-technology-background_52683-73672.jpg?size=626&ext=jpg&ga=GA1.1.2008272138.1725408000&semt=ais_hybrid);
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 100vh;
+    }
+
+    .container {
+        margin-top: 50px;
+    }
+    .card {
+        border-radius: 10px;
+        background-color: #fff;
+        padding: 20px;
+    }
+    .btn-primary {
+        background-color: #007bff;
+        border: none;
+        transition: background-color 0.3s ease;
+    }
+    .btn-primary:hover {
+        background-color: #0056b3;
+    }
+    .form-control {
+        box-shadow: none;
+        border: 1px solid #ced4da;
+        transition: border-color 0.3s ease-in-out;
+    }
+    .form-control:focus {
+        border-color: #007bff;
+    }
+</style>
+{% endblock %}
